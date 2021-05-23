@@ -1,0 +1,9 @@
+﻿@page "/uiunittesting" 
+
+<EditForm OnValidSubmit="OnValidSubmitAsync" Model="_form">
+    <InputDate @bind-Value="_form.Date" />
+    <label>Summary</label>
+    <InputText @bind-Value="_form.Summary" placeholder="Enter a summary..."/>
+    <InputNumber @bind-Value="_form.TemperatureC" />
+    <button type="submit" class="btn btn-success">Submit</button>
+</EditForm>

@@ -1,0 +1,33 @@
+﻿@using BlazorTechTalk.BlazorUI.Services
+@using BlazorTechTalk.BlazorUI.Shared.Components.Bases
+
+@switch (ComponentStateService.GetCurrentState())
+{
+    case ComponentState.Loading:
+        if (Loading == null)
+        {
+            @:@{
+                <LoadingBase />
+            }
+        }
+        else
+        {
+            @Loading
+        }
+        break;
+    case ComponentState.Content:
+        @ChildContent
+        break;
+    default:
+        if (Error == null)
+        {
+            @:@{
+                <ErrorBase />
+            }
+        }
+        else
+        {
+            @Error
+        }
+        break;
+}

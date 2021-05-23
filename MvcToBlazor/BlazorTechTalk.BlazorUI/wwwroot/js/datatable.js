@@ -1,0 +1,3 @@
+﻿function initializeDataTable() {
+    $('#example').DataTable();
+}

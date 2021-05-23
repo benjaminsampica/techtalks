@@ -1,0 +1,52 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="datatable">BlazorTechTalk.BlazorUI</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="datatable">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> DataTable
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="jsdatatable">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> JS DataTable
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="dbcontexterror">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> DbContextError
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="errorhandling">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Error Handling
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="uiunittesting">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> UI Unit Testing
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="statefulcomponent">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Stateful Component
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

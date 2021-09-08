@@ -1,0 +1,13 @@
+﻿@page "/AddOrder"
+
+<EditForm OnValidSubmit="OnValidSubmitAsync" Model="_form">
+    <InputSelect @bind-Value="@_form.ProductIds">
+        @{
+            // Product items
+        }
+    </InputSelect>
+</EditForm>
+
+@{ 
+    // Whatever other markup, components, etc.
+}

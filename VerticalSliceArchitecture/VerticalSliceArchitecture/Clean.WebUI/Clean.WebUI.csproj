@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\AddOrder.css" />
+    <Content Remove="wwwroot\js\AddOrder.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean.Application\Clean.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\AddOrder.css" />
+    <None Include="wwwroot\js\AddOrder.js" />
+  </ItemGroup>
+
+</Project>

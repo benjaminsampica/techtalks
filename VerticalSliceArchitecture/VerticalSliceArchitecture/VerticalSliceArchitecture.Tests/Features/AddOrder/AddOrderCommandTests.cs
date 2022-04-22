@@ -23,3 +23,14 @@ public class AddOrderCommandTests : IntegrationTestBase
 
     // Tests for validator, etc.
 }
+
+public class AddOrderPageTests : UITestBase
+{
+    [Test]
+    public void IAmAPointlessTest_ToDemonstrateUITesting()
+    {
+        var cut = TestContext.RenderComponent<AddOrderPage>();
+
+        cut.Markup.Contains("form").Should().BeTrue();
+    }
+}

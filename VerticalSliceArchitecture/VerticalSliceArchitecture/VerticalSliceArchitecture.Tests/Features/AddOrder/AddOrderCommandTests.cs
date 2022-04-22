@@ -1,34 +1,25 @@
-﻿using FluentAssertions;
-using NUnit.Framework;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using VerticalSliceArchitecture.Entities;
+﻿using VerticalSliceArchitecture.Entities;
 using VerticalSliceArchitecture.Features.AddOrder;
 
-namespace VerticalSliceArchitecture.Tests.Features.AddOrder
+namespace VerticalSliceArchitecture.Tests.Features.AddOrder;
+
+public class AddOrderCommandTests : IntegrationTestBase
 {
-    using static FakeFactory;
-    using static IntegrationTesting;
-
-    public class AddOrderCommandTests : IntegrationTestBase
+    [Test]
+    public async Task GivenAListOfProductIds_ThenTheOrderIsCreatedWithThoseProducts()
     {
-        [Test]
-        public async Task GivenAListOfProductIds_ThenTheOrderIsCreatedWithThoseProducts()
+        var product = CreateFakeProduct();
+
+        var command = new AddOrderCommand
         {
-            var product = CreateFakeProduct();
-            await AddAsync(product);
+            ProductIds = new List<int> { product.Id }
+        };
 
-            var command = new AddOrderCommand
-            {
-                ProductIds = new List<int> { product.Id }
-            };
+        await SendAsync(command);
 
-            await SendAsync(command);
-
-            var order = await FindFirstAsync<Order>();
-            order.ReferenceNumber.Should().NotBeEmpty();
-        }
-
-        // Tests for validator, etc.
+        var order = await FindFirstAsync<Order>();
+        order.ReferenceNumber.Should().NotBeEmpty();
     }
+
+    // Tests for validator, etc.
 }

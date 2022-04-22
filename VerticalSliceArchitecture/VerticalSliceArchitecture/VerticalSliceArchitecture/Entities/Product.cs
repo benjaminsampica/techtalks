@@ -1,8 +1,7 @@
-﻿namespace VerticalSliceArchitecture.Entities
+﻿namespace VerticalSliceArchitecture.Entities;
+
+public class Product
 {
-    public class Product
-    {
-        public int Id { get; set; }
-        public int Quantity { get; set; }
-    }
+    public int Id { get; set; }
+    public int Quantity { get; set; }
 }

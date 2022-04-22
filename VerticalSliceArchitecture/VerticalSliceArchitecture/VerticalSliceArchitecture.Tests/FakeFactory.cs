@@ -1,19 +1,17 @@
-﻿using AutoBogus;
-using VerticalSliceArchitecture.Entities;
+﻿using VerticalSliceArchitecture.Entities;
 
-namespace VerticalSliceArchitecture.Tests
+namespace VerticalSliceArchitecture.Tests;
+
+internal static class FakeFactory
 {
-    internal static class FakeFactory
+    public static Product CreateFakeProduct()
     {
-        public static Product CreateFakeProduct()
-        {
-            var fakeProduct = new AutoFaker<Product>()
-                .Ignore(p => p.Id);
+        var fakeProduct = new AutoFaker<Product>()
+            .Ignore(p => p.Id);
 
-            return fakeProduct.Generate();
-        }
-
-        public static Order CreateFakeOrder()
-            => AutoFaker.Generate<Order>();
+        return fakeProduct.Generate();
     }
+
+    public static Order CreateFakeOrder()
+        => AutoFaker.Generate<Order>();
 }

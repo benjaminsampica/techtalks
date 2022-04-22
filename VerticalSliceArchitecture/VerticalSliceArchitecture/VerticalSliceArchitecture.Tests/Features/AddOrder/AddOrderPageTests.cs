@@ -14,7 +14,6 @@ public class AddOrderPageTests : UITestBase
     }
 }
 
-
 public class AddOrderCommandTests : IntegrationTestBase
 {
     [Test]

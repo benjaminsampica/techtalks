@@ -36,7 +36,7 @@ public class Function2(ILogger<Function2> logger)
         logger.LogInformation("C# HTTP trigger function processed a request.");
 
         // easy access to HttpContrxt, headers, etc. like you're used to in ASP.NET Core
-        var cancellationToken = req.HttpContext.TraceIdentifier;
+        var traceparent = req.HttpContext.TraceIdentifier;
         var authHeader = req.Headers.Authorization.FirstOrDefault();
 
         return new ContentResult

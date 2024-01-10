@@ -1,4 +1,6 @@
+using BlazorWeb.Client.Pages;
 using BlazorWeb.Components;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,5 +32,12 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(BlazorWeb.Client._Imports).Assembly);
+
+app.Map("/renderanywhere", () =>
+{
+    var component = new RazorComponentResult<Counter>();
+
+    return component;
+});
 
 app.Run();

@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "BlazorServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureFunction", "AzureFunction\AzureFunction.csproj", "{238BFF98-2334-4469-9881-064A89D1C02A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpTwelve", "CSharpTwelve\CSharpTwelve.csproj", "{A489AF98-140B-4497-91A3-7733391BA8DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpTwelve", "CSharpTwelve\CSharpTwelve.csproj", "{A489AF98-140B-4497-91A3-7733391BA8DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfCoreEight", "EfCoreEight\EfCoreEight.csproj", "{28387872-AB49-4B62-A7CC-AE13F6521949}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreEight", "EFCoreEight\EFCoreEight.csproj", "{DDF80F33-48D0-408F-8A17-0CED5E2329CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{A489AF98-140B-4497-91A3-7733391BA8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A489AF98-140B-4497-91A3-7733391BA8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A489AF98-140B-4497-91A3-7733391BA8DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28387872-AB49-4B62-A7CC-AE13F6521949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28387872-AB49-4B62-A7CC-AE13F6521949}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28387872-AB49-4B62-A7CC-AE13F6521949}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28387872-AB49-4B62-A7CC-AE13F6521949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF80F33-48D0-408F-8A17-0CED5E2329CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF80F33-48D0-408F-8A17-0CED5E2329CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF80F33-48D0-408F-8A17-0CED5E2329CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF80F33-48D0-408F-8A17-0CED5E2329CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

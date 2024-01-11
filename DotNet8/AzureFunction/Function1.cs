@@ -16,7 +16,7 @@ public class Function1(ILogger<Function1> logger)
         logger.LogInformation("C# HTTP trigger function processed a request.");
 
         req.Headers.TryGetValues("Authorization", out var values);
-        var bearerToken = values?.FirstOrDefault();
+        var authToken = values?.FirstOrDefault();
 
         var response = req.CreateResponse(HttpStatusCode.OK);
         response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
@@ -41,8 +41,7 @@ public class Function2(ILogger<Function2> logger)
 
         return new ContentResult
         {
-            Content = "Welcome to Azure Functions!",
-            ContentType = "text/plain; charset=utf-8"
+            Content = "Welcome to Azure Functions!"
         };
     }
 }

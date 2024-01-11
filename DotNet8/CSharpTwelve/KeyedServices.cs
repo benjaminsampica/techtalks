@@ -65,7 +65,7 @@ public class LikesProgrammingNerdValidator : INerdValidator
     }
 }
 
-public static class DependencyInjectionExtensions
+public static class DependencyInjectionExtensions1
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {

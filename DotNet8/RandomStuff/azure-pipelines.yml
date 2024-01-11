@@ -1,0 +1,18 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+
+stages:
+- stage: Build
+  jobs:
+  - job:
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: 'dotnet publish web app'
+      inputs:
+        command: 'publish'
+        projects: '**/$(Web).csproj'
+        arguments: '-o $(Build.ArtifactStagingDirectory)/$(Web)' # -c 'Release'' no longer needed. `dotnet publish` by default now is release.
+        modifyOutputPath: false

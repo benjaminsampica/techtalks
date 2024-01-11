@@ -13,6 +13,6 @@ stages:
       displayName: 'dotnet publish web app'
       inputs:
         command: 'publish'
-        projects: '**/$(Web).csproj'
-        arguments: '-o $(Build.ArtifactStagingDirectory)/$(Web)' # -c 'Release' no longer needed. `dotnet publish` by default now is release.
+        projects: '**/Web.csproj'
+        arguments: '-o $(Build.ArtifactStagingDirectory)/Web.csproj' # -c 'Release' no longer needed. `dotnet publish` by default now is release.
         modifyOutputPath: false

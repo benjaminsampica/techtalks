@@ -31,6 +31,11 @@ public class MyMethodUsingCaseysTime(CaseysTimeProvider caseysTimeProvider)
 
         var thisInstant = caseysTimeProvider.GetTimestamp();
         var elapsed = caseysTimeProvider.GetElapsedTime(thisInstant);
+
+        // https://github.com/dotnet/runtime/issues/95213
+        // Backporting on 8.0.2 sometime in the next couple of weeks.
+        // Linux only issue
+        var bugWithDisplayName = caseysTimeProvider.LocalTimeZone.StandardName;
     }
 }
 

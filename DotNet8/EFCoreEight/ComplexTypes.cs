@@ -1,7 +1,6 @@
-﻿using EFCoreEight;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EfCoreEight;
+namespace EFCoreEight;
 
 [ComplexType]
 public class Address

@@ -1,0 +1,3 @@
+﻿# Visual Studio 17.6
+
+Hit `CTRL` + `T`

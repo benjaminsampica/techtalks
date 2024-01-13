@@ -1,0 +1,10 @@
+# Visual Studio 17.8
+
+1. use `CTRL` + `SHIFT` + `F` to open the `Find and Replace` window.
+2. click the `Replace in Files` tab.
+3. check `preserve casing`
+
+variable1
+Variable1
+VARIABLE1
+

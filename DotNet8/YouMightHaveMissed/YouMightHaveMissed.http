@@ -1,0 +1,17 @@
+@YouMightHaveMissed_HostAddress = http://localhost:5115
+
+GET {{YouMightHaveMissed_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+# Get an Okta token. 
+# Requires a username and password in a http-client.env.json.user file.
+
+POST {{oktaTokenHost}}/v1/token
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id={{client_id}}&username={{username}}&password={{password}}&scope=order_catalog_items:read kitchen_supply_orders:read
+
+###

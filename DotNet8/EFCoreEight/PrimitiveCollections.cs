@@ -1,6 +1,4 @@
-﻿using EFCoreEight;
-
-namespace EfCoreEight;
+﻿namespace EFCoreEight;
 
 public class PrimitiveCollection
 {

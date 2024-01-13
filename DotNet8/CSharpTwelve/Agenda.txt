@@ -1,6 +1,0 @@
-- Csharp12
-- Blazor Web / Server
-  - Rendering components anywhere
-- Azure function
-- Ef core 8
-- Performance

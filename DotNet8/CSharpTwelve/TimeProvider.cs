@@ -70,3 +70,5 @@ public class TestMyMethodUsingNoWaiting
         Console.WriteLine("Exiting Task.Delay at " + timer.GetUtcNow());
     }
 }
+
+// Can use Microsoft.Extensions.TimeProvider.Testing for easy testing of TimeProvider

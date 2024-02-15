@@ -37,7 +37,7 @@ public class Function2(ILogger<Function2> logger)
 
         // easy access to HttpContrxt, headers, etc. like you're used to in ASP.NET Core
         var traceparent = req.HttpContext.TraceIdentifier;
-        var authHeader = req.Headers.Authorization.FirstOrDefault();
+        var authToken = req.Headers.Authorization.FirstOrDefault();
 
         return new ContentResult
         {

@@ -2,7 +2,7 @@
 dotnet publish /t:PublishContainer -p ContainerImageTags="base"
 
 // w/o native aot
-dotnet publish -t:PublishContainer -p ContainerImageTags="trimmed" --ignore-failed-sources --arch arm64 --os linux
+dotnet publish -t:PublishContainer -p ContainerImageTags="trimmed" --arch arm64 --os linux
 
 // Web publish
 -p:PublishProfile=DefaultContainer instead of /t:PublishContainer

@@ -11,6 +11,8 @@
 	<!--<ContainerFamily>jammy-chiseled</ContainerFamily>
 	<PublishTrimmed>true</PublishTrimmed>-->
 	<!--<PublishAot>true</PublishAot>-->
+	  
+	
   </PropertyGroup>
 
   <ItemGroup>

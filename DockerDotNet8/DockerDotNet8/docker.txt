@@ -16,3 +16,4 @@ docker run -it --rm --entrypoint /bin/bash dockerdotnet8:base --user root
 // Websites
 https://learn.microsoft.com/en-us/dotnet/core/docker/publish-as-container?pivots=dotnet-8-0
 https://learn.microsoft.com/en-us/dotnet/core/docker/container-images
+https://github.com/dotnet/dotnet-docker/blob/main/documentation/scenarios/nuget-credentials.md

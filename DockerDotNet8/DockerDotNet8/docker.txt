@@ -1,19 +1,20 @@
 // base
-dotnet publish /t:PublishContainer -p ContainerImageTags="base"
+dotnet publish -t:PublishContainer -p ContainerImageTags="base"
 
 // w/o native aot
 dotnet publish -t:PublishContainer -p ContainerImageTags="trimmed" --arch arm64 --os linux
-
-// Web publish
--p:PublishProfile=DefaultContainer instead of /t:PublishContainer
 
 // List images
 docker images 
 
 // Run docker image and enter
-docker run -it --rm --entrypoint /bin/bash dockerdotnet8:base --user root
+docker run -it --rm  --user root --entrypoint /bin/bash dockerdotnet8:base
+
+// docker login
+docker login techtalk01.azurecr.io --username techtalk01 --password password
 
 // Websites
 https://learn.microsoft.com/en-us/dotnet/core/docker/publish-as-container?pivots=dotnet-8-0
 https://learn.microsoft.com/en-us/dotnet/core/docker/container-images
 https://github.com/dotnet/dotnet-docker/blob/main/documentation/scenarios/nuget-credentials.md
+

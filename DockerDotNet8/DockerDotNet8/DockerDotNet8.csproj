@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<!--<ContainerRegistry>techtalk01.azurecr.io</ContainerRegistry>-->
 	<!--<ContainerRepository>docker-dotnet-eight</ContainerRepository>
 	<ContainerBaseImage>mcr.microsoft.com/dotnet/runtime:8.0</ContainerBaseImage> -->
 	  <!-- runtime-deps -->
@@ -11,8 +12,6 @@
 	<!--<ContainerFamily>jammy-chiseled</ContainerFamily>
 	<PublishTrimmed>true</PublishTrimmed>-->
 	<!--<PublishAot>true</PublishAot>-->
-	  
-	
   </PropertyGroup>
 
   <ItemGroup>

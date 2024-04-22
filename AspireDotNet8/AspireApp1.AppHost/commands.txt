@@ -1,0 +1,5 @@
+dotnet run --project AspireApp1.AppHost.csproj --publisher manifest --output-path ../aspire-manifest.json
+
+azd init
+azd provision --preview
+azd infra synth
